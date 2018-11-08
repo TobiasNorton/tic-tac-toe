@@ -39,3 +39,7 @@ button {
 .box span {
   visibility: hidden;
 }
+
+.hidden {
+  display: none;
+}
