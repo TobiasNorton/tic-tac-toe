@@ -149,7 +149,6 @@ const fillBoxEightWithLetter = () => {
     winLogic()
   }
   boxLetter = !boxLetter
-  // boxLetter = boxLetter ? false : true
 }
 
 const fillBoxNineWithLetter = () => {
@@ -168,7 +167,6 @@ const fillBoxNineWithLetter = () => {
     winLogic()
   }
   boxLetter = !boxLetter
-  // boxLetter ? (boxLetter = false) : (boxLetter = true)
 }
 
 const winLogic = () => {
@@ -184,8 +182,6 @@ const winLogic = () => {
   ) {
     let playerOneWins = document.querySelector('h3')
     playerOneWins.textContent = 'Player One Wins!'
-    // let hiddenBoard = document.querySelector('.play-area')
-    // hiddenBoard.classList.add('hidden')
     let resetButton = document.querySelector('.reset')
     resetButton.classList.remove('hidden')
   }
@@ -202,8 +198,6 @@ const winLogic = () => {
   ) {
     let playerTwoWins = document.querySelector('h3')
     playerTwoWins.textContent = 'Player Two Wins!'
-    // let hiddenBoard = document.querySelector('.play-area')
-    // hiddenBoard.classList.add('hidden')
     let resetButton = document.querySelector('.reset')
     resetButton.classList.remove('hidden')
   }
@@ -214,8 +208,6 @@ const winLogic = () => {
   ) {
     let tieGame = document.querySelector('h3')
     tieGame.textContent = 'Tie Game!'
-    // let hiddenBoard = document.querySelector('.play-area')
-    // hiddenBoard.classList.add('hidden')
     let resetButton = document.querySelector('.reset')
     resetButton.classList.remove('hidden')
   }
