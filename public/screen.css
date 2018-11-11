@@ -2,38 +2,80 @@ html {
   height: 100%;
 }
 
+@font-face {
+  font-family: 'Meatloaf';
+  src: url(./assets/Meatloaf.ttf);
+}
+
+@font-face {
+  font-family: 'Meatloaf Sketched';
+  src: url(./assets/MeatloafSketched.ttf);
+}
+
+@font-face {
+  font-family: 'Meatloaf Solid';
+  src: url(./assets/MeatloafSolid.ttf);
+}
+
+@font-face {
+  font-family: 'Cartoon Toy Turbo';
+  src: url(./assets/CartoonToyTurbo.otf);
+}
+
 body {
   margin: 0;
   min-height: 100%;
   font: 16px / 1 sans-serif;
+  background-color: rgb(171, 217, 252);
 }
 
 h1 {
   text-align: center;
-  font-size: 3.5rem;
+  font-size: 10rem;
+  /* font-family: 'Lobster', cursive; */
+  font-family: 'Meatloaf', sans-serif;
+  font-weight: normal;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  margin: 0;
+  line-height: 2rem;
+  background-color: rgb(51, 51, 51);
+  /* color: rgb(232, 232, 232); */
+  color: rgba(255, 253, 150, 0.9);
+  border-bottom: 4px solid rgba(255, 255, 255);
 }
 
 h3 {
+  margin: 1rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 4rem;
+  font-weight: normal;
+  font-family: 'Meatloaf Sketched', sans-serif;
 }
 
 .play-area {
   display: flex;
   justify-content: center;
-  padding-top: 1rem;
 }
 
 .box {
-  width: 10rem;
-  height: 10rem;
-  background-color: rgb(124, 194, 204);
+  width: 8rem;
+  height: 8rem;
   margin-top: 0.1rem;
   margin-bottom: 0.1rem;
+  border-radius: 6px;
+  border: none;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  padding-bottom: 3.5rem;
 }
 
-button {
+button.box {
   font-size: 6rem;
+  font-family: 'Cartoon Toy Turbo', sans-serif;
+}
+
+button.box:hover {
+  cursor: pointer;
 }
 
 .box span {
@@ -42,4 +84,24 @@ button {
 
 .hidden {
   display: none;
+}
+
+.reset-container {
+  display: flex;
+  justify-content: center;
+}
+
+.reset {
+  font-size: 2.4rem;
+  margin: 2rem;
+  padding: 0.5rem 1.6rem 0.3rem 1.6rem;
+  border-radius: 5px;
+  font-family: 'Meatloaf Solid', sans-serif;
+  border-radius: 6px;
+  border: none;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.reset:hover {
+  cursor: pointer;
 }
