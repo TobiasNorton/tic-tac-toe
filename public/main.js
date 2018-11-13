@@ -2,24 +2,38 @@ let boxLetter = true
 
 let numberOfTurns = 0
 
-let playerOneArray = []
+let playerOneBoxes = []
 
-let playerTwoArray = []
+let playerTwoBoxes = []
+
+let playerOneTurn = true
+
+const togglePlayerTurns = () => {
+  if (playerOneTurn === true) {
+    let turnHeader = document.querySelector('h3')
+    turnHeader.textContent = 'Player One Go!'
+  } else {
+    let turnHeader = document.querySelector('h3')
+    turnHeader.textContent = 'Player Two Go!'
+  }
+}
 
 const fillBoxOneWithLetter = () => {
   document.querySelector('.one').disabled = true
   document.querySelector('.one').style.color = 'black'
   numberOfTurns++
+  playerOneTurn = !playerOneTurn
+  togglePlayerTurns()
   console.log(boxLetter)
   if (boxLetter === true) {
     boxOne.textContent = 'x'
-    playerOneArray.push(1)
-    console.log(playerOneArray)
+    playerOneBoxes.push(1)
+    console.log(playerOneBoxes)
     winLogic()
   } else {
     boxOne.textContent = 'o'
-    playerTwoArray.push(1)
-    console.log(playerTwoArray)
+    playerTwoBoxes.push(1)
+    console.log(playerTwoBoxes)
     winLogic()
   }
   boxLetter = !boxLetter
@@ -29,15 +43,18 @@ const fillBoxTwoWithLetter = () => {
   document.querySelector('.two').disabled = true
   document.querySelector('.two').style.color = 'black'
   numberOfTurns++
+  playerOneTurn = !playerOneTurn
+  togglePlayerTurns()
+  togglePlayerTurns()
   if (boxLetter === true) {
     boxTwo.textContent = 'x'
-    playerOneArray.push(2)
-    console.log(playerOneArray)
+    playerOneBoxes.push(2)
+    console.log(playerOneBoxes)
     winLogic()
   } else {
     boxTwo.textContent = 'o'
-    playerTwoArray.push(2)
-    console.log(playerTwoArray)
+    playerTwoBoxes.push(2)
+    console.log(playerTwoBoxes)
     winLogic()
   }
   boxLetter = !boxLetter
@@ -47,15 +64,17 @@ const fillBoxThreeWithLetter = () => {
   document.querySelector('.three').disabled = true
   document.querySelector('.three').style.color = 'black'
   numberOfTurns++
+  playerOneTurn = !playerOneTurn
+  togglePlayerTurns()
   if (boxLetter === true) {
     boxThree.textContent = 'x'
-    playerOneArray.push(3)
-    console.log(playerOneArray)
+    playerOneBoxes.push(3)
+    console.log(playerOneBoxes)
     winLogic()
   } else {
     boxThree.textContent = 'o'
-    playerTwoArray.push(3)
-    console.log(playerTwoArray)
+    playerTwoBoxes.push(3)
+    console.log(playerTwoBoxes)
     winLogic()
   }
   boxLetter = !boxLetter
@@ -65,15 +84,17 @@ const fillBoxFourWithLetter = () => {
   document.querySelector('.four').disabled = true
   document.querySelector('.four').style.color = 'black'
   numberOfTurns++
+  playerOneTurn = !playerOneTurn
+  togglePlayerTurns()
   if (boxLetter === true) {
     boxFour.textContent = 'x'
-    playerOneArray.push(4)
-    console.log(playerOneArray)
+    playerOneBoxes.push(4)
+    console.log(playerOneBoxes)
     winLogic()
   } else {
     boxFour.textContent = 'o'
-    playerTwoArray.push(4)
-    console.log(playerTwoArray)
+    playerTwoBoxes.push(4)
+    console.log(playerTwoBoxes)
     winLogic()
   }
   boxLetter = !boxLetter
@@ -83,15 +104,17 @@ const fillBoxFiveWithLetter = () => {
   document.querySelector('.five').disabled = true
   document.querySelector('.five').style.color = 'black'
   numberOfTurns++
+  playerOneTurn = !playerOneTurn
+  togglePlayerTurns()
   if (boxLetter === true) {
     boxFive.textContent = 'x'
-    playerOneArray.push(5)
-    console.log(playerOneArray)
+    playerOneBoxes.push(5)
+    console.log(playerOneBoxes)
     winLogic()
   } else {
     boxFive.textContent = 'o'
-    playerTwoArray.push(5)
-    console.log(playerTwoArray)
+    playerTwoBoxes.push(5)
+    console.log(playerTwoBoxes)
     winLogic()
   }
   boxLetter = !boxLetter
@@ -101,15 +124,17 @@ const fillBoxSixWithLetter = () => {
   document.querySelector('.six').disabled = true
   document.querySelector('.six').style.color = 'black'
   numberOfTurns++
+  playerOneTurn = !playerOneTurn
+  togglePlayerTurns()
   if (boxLetter === true) {
     boxSix.textContent = 'x'
-    playerOneArray.push(6)
-    console.log(playerOneArray)
+    playerOneBoxes.push(6)
+    console.log(playerOneBoxes)
     winLogic()
   } else {
     boxSix.textContent = 'o'
-    playerTwoArray.push(6)
-    console.log(playerTwoArray)
+    playerTwoBoxes.push(6)
+    console.log(playerTwoBoxes)
     winLogic()
   }
   boxLetter = !boxLetter
@@ -119,15 +144,17 @@ const fillBoxSevenWithLetter = () => {
   document.querySelector('.seven').disabled = true
   document.querySelector('.seven').style.color = 'black'
   numberOfTurns++
+  playerOneTurn = !playerOneTurn
+  togglePlayerTurns()
   if (boxLetter === true) {
     boxSeven.textContent = 'x'
-    playerOneArray.push(7)
-    console.log(playerOneArray)
+    playerOneBoxes.push(7)
+    console.log(playerOneBoxes)
     winLogic()
   } else {
     boxSeven.textContent = 'o'
-    playerTwoArray.push(7)
-    console.log(playerTwoArray)
+    playerTwoBoxes.push(7)
+    console.log(playerTwoBoxes)
     winLogic()
   }
   boxLetter = !boxLetter
@@ -137,15 +164,17 @@ const fillBoxEightWithLetter = () => {
   document.querySelector('.eight').disabled = true
   document.querySelector('.eight').style.color = 'black'
   numberOfTurns++
+  playerOneTurn = !playerOneTurn
+  togglePlayerTurns()
   if (boxLetter === true) {
     boxEight.textContent = 'x'
-    playerOneArray.push(8)
-    console.log(playerOneArray)
+    playerOneBoxes.push(8)
+    console.log(playerOneBoxes)
     winLogic()
   } else {
     boxEight.textContent = 'o'
-    playerTwoArray.push(8)
-    console.log(playerTwoArray)
+    playerTwoBoxes.push(8)
+    console.log(playerTwoBoxes)
     winLogic()
   }
   boxLetter = !boxLetter
@@ -155,15 +184,17 @@ const fillBoxNineWithLetter = () => {
   document.querySelector('.nine').disabled = true
   document.querySelector('.nine').style.color = 'black'
   numberOfTurns++
+  playerOneTurn = !playerOneTurn
+  togglePlayerTurns()
   if (boxLetter === true) {
     boxNine.textContent = 'x'
-    playerOneArray.push(9)
-    console.log(playerOneArray)
+    playerOneBoxes.push(9)
+    console.log(playerOneBoxes)
     winLogic()
   } else {
     boxNine.textContent = 'o'
-    playerTwoArray.push(9)
-    console.log(playerTwoArray)
+    playerTwoBoxes.push(9)
+    console.log(playerTwoBoxes)
     winLogic()
   }
   boxLetter = !boxLetter
@@ -171,14 +202,14 @@ const fillBoxNineWithLetter = () => {
 
 const winLogic = () => {
   if (
-    (playerOneArray.includes(1) && playerOneArray.includes(2) && playerOneArray.includes(3)) ||
-    (playerOneArray.includes(4) && playerOneArray.includes(5) && playerOneArray.includes(6)) ||
-    (playerOneArray.includes(7) && playerOneArray.includes(8) && playerOneArray.includes(9)) ||
-    (playerOneArray.includes(1) && playerOneArray.includes(4) && playerOneArray.includes(7)) ||
-    (playerOneArray.includes(2) && playerOneArray.includes(5) && playerOneArray.includes(8)) ||
-    (playerOneArray.includes(3) && playerOneArray.includes(6) && playerOneArray.includes(9)) ||
-    (playerOneArray.includes(1) && playerOneArray.includes(5) && playerOneArray.includes(9)) ||
-    (playerOneArray.includes(3) && playerOneArray.includes(5) && playerOneArray.includes(7))
+    (playerOneBoxes.includes(1) && playerOneBoxes.includes(2) && playerOneBoxes.includes(3)) ||
+    (playerOneBoxes.includes(4) && playerOneBoxes.includes(5) && playerOneBoxes.includes(6)) ||
+    (playerOneBoxes.includes(7) && playerOneBoxes.includes(8) && playerOneBoxes.includes(9)) ||
+    (playerOneBoxes.includes(1) && playerOneBoxes.includes(4) && playerOneBoxes.includes(7)) ||
+    (playerOneBoxes.includes(2) && playerOneBoxes.includes(5) && playerOneBoxes.includes(8)) ||
+    (playerOneBoxes.includes(3) && playerOneBoxes.includes(6) && playerOneBoxes.includes(9)) ||
+    (playerOneBoxes.includes(1) && playerOneBoxes.includes(5) && playerOneBoxes.includes(9)) ||
+    (playerOneBoxes.includes(3) && playerOneBoxes.includes(5) && playerOneBoxes.includes(7))
   ) {
     let playerOneWins = document.querySelector('h3')
     playerOneWins.textContent = 'Player One Wins!'
@@ -187,14 +218,14 @@ const winLogic = () => {
   }
 
   if (
-    (playerTwoArray.includes(1) && playerTwoArray.includes(2) && playerTwoArray.includes(3)) ||
-    (playerTwoArray.includes(4) && playerTwoArray.includes(5) && playerTwoArray.includes(6)) ||
-    (playerTwoArray.includes(7) && playerTwoArray.includes(8) && playerTwoArray.includes(9)) ||
-    (playerTwoArray.includes(1) && playerTwoArray.includes(4) && playerTwoArray.includes(7)) ||
-    (playerTwoArray.includes(2) && playerTwoArray.includes(5) && playerTwoArray.includes(8)) ||
-    (playerTwoArray.includes(3) && playerTwoArray.includes(6) && playerTwoArray.includes(9)) ||
-    (playerTwoArray.includes(1) && playerTwoArray.includes(5) && playerTwoArray.includes(9)) ||
-    (playerTwoArray.includes(3) && playerTwoArray.includes(5) && playerTwoArray.includes(7))
+    (playerTwoBoxes.includes(1) && playerTwoBoxes.includes(2) && playerTwoBoxes.includes(3)) ||
+    (playerTwoBoxes.includes(4) && playerTwoBoxes.includes(5) && playerTwoBoxes.includes(6)) ||
+    (playerTwoBoxes.includes(7) && playerTwoBoxes.includes(8) && playerTwoBoxes.includes(9)) ||
+    (playerTwoBoxes.includes(1) && playerTwoBoxes.includes(4) && playerTwoBoxes.includes(7)) ||
+    (playerTwoBoxes.includes(2) && playerTwoBoxes.includes(5) && playerTwoBoxes.includes(8)) ||
+    (playerTwoBoxes.includes(3) && playerTwoBoxes.includes(6) && playerTwoBoxes.includes(9)) ||
+    (playerTwoBoxes.includes(1) && playerTwoBoxes.includes(5) && playerTwoBoxes.includes(9)) ||
+    (playerTwoBoxes.includes(3) && playerTwoBoxes.includes(5) && playerTwoBoxes.includes(7))
   ) {
     let playerTwoWins = document.querySelector('h3')
     playerTwoWins.textContent = 'Player Two Wins!'
